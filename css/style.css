@@ -1,0 +1,120 @@
+:root{
+    --nuit: #120e0a;
+    --orange: #fe7728;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family:  'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--nuit);
+}
+
+header{
+    height: 39rem;
+    background-image:linear-gradient(-80deg,  #d9631ed6, #c23b6ae0, #681532 80%), url('../images/hero2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 0 20% 20%;
+}
+a{
+    color: white;
+    font-size: 0.8rem;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width:  70rem;
+    margin: auto;
+    padding: 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0px 0px 30px 30px ;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 35rem;
+}
+nav ul li{
+    display: inline;
+}
+nav div button{
+    padding: 10px 24px;
+    border-radius: 30px;
+    border: none;
+}
+.hero{
+    margin: 2rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+}
+.presentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30rem;
+}
+.hero_h1{
+    font-size: 3.5rem;
+    color: white;
+}
+.hero_p{
+    color: white;
+}
+.hero_btn{
+    padding: 10px 24px;
+}
+.hero_btn a{
+    font-size: 0.9rem;
+    color: #120e0a;
+}
+.adresse span {
+    color: white;
+}
+.adresse span svg{
+    color: var(--orange);
+}
+@media screen and (max-width: 1066px){
+    header{
+        height: auto;
+        border-radius: 0px;
+    }
+    nav{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .presentation{
+        height: auto;
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 768px){
+    header{
+        height: auto;
+        border-radius: 0px;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .presentation{
+        height: auto;
+        gap: 2rem;
+    }
+    .adresse{
+        display: flex;
+        flex-direction: column;
+    }
+}
