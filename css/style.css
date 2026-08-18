@@ -1,5 +1,5 @@
 :root{
-    --nuit: #120e0a;
+    --nuit: #0b0004;
     --orange: #fe7728;
     --ivoire: #F5EEE1;
     --ivoire-foncé:#CFC6B4;
@@ -59,7 +59,7 @@ nav div button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     height: 30rem;
     margin: 3rem 0;
 }
@@ -103,6 +103,10 @@ nav div button{
 }
 .btn1 a{
     color: var(--ivoire);
+}
+.btn1:hover{
+    background-color: var(--or);
+    color: var(--nuit);
 }
 .adresse span {
     color: #ffcf32; 
@@ -154,6 +158,63 @@ nav div button{
 .decompte_item small{
     color: var(--boerdeau);
 }
+/*.......PARTIE PROGRAMME......*/
+.Programme{
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 6rem 4rem;
+}
+.Programme small{
+    color: var(--or);
+    font-weight: 500;
+}
+.Programme h2{
+    color: var(--ivoire);
+    font-weight: 600;
+    font-size: 2rem;
+}
+.programme_jour{
+    display: flex;
+    justify-content: space-between;
+    width: 25rem;
+}
+.programme_jour button{
+    padding: 10px 24px;
+    border-radius: 25px;
+    border: solid 0.01rem var(--or);
+    color: var(--or);
+    background-color: transparent;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.programme_jour button:hover{
+    background-color: var(--or);
+    color: var(--nuit);
+}
+.prog_liste{
+    height: 20rem;
+    width: 30rem;
+    margin: 4rem;
+    display: flex;
+    flex-direction:column;
+}
+.prog_item{
+    padding: 1rem 0;
+    border-bottom: solid 0.01rem var(--ivoire-foncé);
+    display: flex;
+    gap: 3rem;
+}
+.prog_item span{
+    color: var(--or);
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+.prog_item p{
+    color: var(--ivoire);
+}
 @media screen and (max-width: 1066px){
     header{
         height: auto;
@@ -185,6 +246,9 @@ nav div button{
         flex-direction: column;
         width: auto;
     }
+    .hero{
+        margin: auto 4rem;
+    }
     .presentation{
         height: auto;
         gap: 2rem;
@@ -194,3 +258,4 @@ nav div button{
         flex-direction: column;
     }
 }
+
