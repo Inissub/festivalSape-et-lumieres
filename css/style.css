@@ -1,24 +1,28 @@
 :root{
     --nuit: #120e0a;
     --orange: #fe7728;
+    --ivoire: #F5EEE1;
+    --ivoire-foncé:#CFC6B4;
+    --or: #ffcf32;
+    --orage-foncé:#d9631ed6;
+    --boerdeau: #681532;
 }
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family:  'Poppins', sans-serif;
+    font-family:   "Manrope",  sans-serif;
 }
 
 body{
     background-color: var(--nuit);
 }
-
+/*.......PARTIE HEADER......*/
 header{
     height: 39rem;
-    background-image:linear-gradient(-80deg,  #d9631ed6, #c23b6ae0, #681532 80%), url('../images/hero2.webp');
+    background-image:radial-gradient(ellipse,  #d9631ed2, #681532ce, #25030f 80%), url('../images/hero2.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 0 0 20% 20%;
 }
 a{
     color: white;
@@ -27,11 +31,9 @@ a{
 nav{
     display: flex;
     justify-content: space-between;
-    width:  70rem;
     margin: auto;
-    padding: 1rem 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 0px 0px 30px 30px ;
+    padding: 1rem 5rem;
+    background-color: #25030f ;
 }
 nav ul {
     display: flex;
@@ -43,40 +45,114 @@ nav ul li{
 }
 nav div button{
     padding: 10px 24px;
-    border-radius: 30px;
+    border-radius:5px;
     border: none;
 }
 .hero{
     margin: 2rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .presentation{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     height: 30rem;
+    margin: 3rem 0;
 }
 .hero_h1{
-    font-size: 3.5rem;
-    color: white;
+    font-size: 5rem;
+    font-weight: 500;
+    color:  var(--ivoire);
+}
+.hero_h1 em{
+    color: var(--or);
+}
+.hero_P1{
+    font-size: 1.5rem;
+    color: var(--or);
 }
 .hero_p{
-    color: white;
+    color: var(--ivoire-foncé);
+    text-align: center;
+}
+.btns{
+    display: flex;
+    gap: 1rem;
 }
 .hero_btn{
     padding: 10px 24px;
 }
 .hero_btn a{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #120e0a;
+    font-weight: 500;
+}
+.btn3{
+    background-color: var(--or);
+    border: none;
+    border-radius: 5px;
+}
+.btn1{
+    background-color: transparent;
+    border: solid 1px var(--or);
+    border-radius: 5px;
+}
+.btn1 a{
+    color: var(--ivoire);
 }
 .adresse span {
-    color: white;
+    color: #ffcf32; 
+    border: solid 1px #ffcf32;
+    font-size: 0.8rem;
+    padding: 10px 24px;
+    font-weight: 600;
+    border-radius: 25px;
 }
-.adresse span svg{
-    color: var(--orange);
+/*.......PARTIE DECOMPTE......*/
+#decompte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    background-color: var(--ivoire);
+    height: 20rem;
+    padding: 3rem;
+}
+.decompte_titre{
+    color: var(--boerdeau);
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+.decompte_list{
+    display: flex;
+    width: 25rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+.point{
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--or);
+}
+.decompte_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.decompte_item h3{
+    line-height: 1;
+    color: var(--nuit);
+    font-size: 4.3rem;
+    font-weight: 500;
+}
+.decompte_item small{
+    color: var(--boerdeau);
 }
 @media screen and (max-width: 1066px){
     header{
