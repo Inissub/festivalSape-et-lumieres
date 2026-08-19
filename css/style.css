@@ -6,6 +6,7 @@
     --or: #ffcf32;
     --orage-foncé:#d9631ed6;
     --boerdeau: #681532;
+    --bordeau-foncé: #25030f;
 }
 *{
     margin: 0;
@@ -15,12 +16,12 @@
 }
 
 body{
-    background-color: var(--nuit);
+    background: radial-gradient(ellipse, #681532, #0b0004, #0b0004);
 }
 /*.......PARTIE HEADER......*/
 header{
     height: 39rem;
-    background-image:radial-gradient(ellipse,  #d9631ed2, #681532ce, #25030f 80%), url('../images/hero2.webp');
+    background-image:radial-gradient(ellipse,  #d9631ec4, #68153287, #25030fef 70%), url('../images/Nsimba_Hero.avif');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -33,7 +34,7 @@ nav{
     justify-content: space-between;
     margin: auto;
     padding: 1rem 5rem;
-    background-color: #25030f ;
+    background-color: var(--bordeau-foncé);
 }
 nav ul {
     display: flex;
@@ -159,7 +160,7 @@ nav div button{
     color: var(--boerdeau);
 }
 /*.......PARTIE PROGRAMME......*/
-.Programme{
+#programme{
     height: 35rem;
     display: flex;
     flex-direction: column;
@@ -167,11 +168,11 @@ nav div button{
     gap: 2rem;
     padding: 6rem 4rem;
 }
-.Programme small{
+#programme small{
     color: var(--or);
     font-weight: 500;
 }
-.Programme h2{
+#programme h2{
     color: var(--ivoire);
     font-weight: 600;
     font-size: 2rem;
@@ -215,6 +216,72 @@ nav div button{
 .prog_item p{
     color: var(--ivoire);
 }
+
+/*.......LINE UP*/
+#lineup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+#lineup small{
+    color: var(--or);
+    font-weight: 500;
+}
+#lineup h2{
+    color: var(--ivoire);
+    font-weight: 600;
+    font-size: 2rem;
+}
+#lineup_liste{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    width: auto;
+    margin: 80px;
+}
+.artiste_item{
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 18rem;
+    width: auto; 
+}
+
+.artiste_item img{
+    background-color: var(--card);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.conteneur{
+    background-color: var(--bordeau-foncé);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.conteneur h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ivoire);
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+    min-height: 42px; 
+}
+.conteneur span{
+    color: var(--ivoire-foncé);
+}
+
 @media screen and (max-width: 1066px){
     header{
         height: auto;

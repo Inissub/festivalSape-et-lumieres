@@ -30,21 +30,100 @@ vendredi.addEventListener('click', ()=>{
     <li class="prog_item"><span>18:00</span> <p>Ouverture des portes</p></li>
     <li class="prog_item"><span>19:00</span> <p>Show Sape, parade des Ambianceurs</p></li>
     <li class="prog_item"><span>21:00</span> <p>Concert d'ouverture</p></li>
+    <li class="prog_item"><span>23:00</span> <p>Fermeture de la première soirée</p></li>
     </ul>`
+    vendredi.style.background = "#ffcf32";
+    samedi.style.background = "";
+    dimanche.style.background = "";
 })
 
 samedi.addEventListener('click', ()=>{
     programme.innerHTML = `<ul class="prog_liste" >
     <li class="prog_item" ><span>10:00</span> <p>Atelier stylisme & couture</p></li>
+    <li class="prog_item" ><span>12:00</span> <p> Panel “La Sape, un art de vivre” avec des figures locales</p></li>
     <li class="prog_item"><span>15:00</span> <p>Défilé des créateurs</p></li>
     <li class="prog_item"><span>20:00</span> <p>Concert de nuit</p></li>
     </ul>`
+    vendredi.style.background = "";
+    dimanche.style.background = "";
+    samedi.style.background = "#ffcf32";
 })
 
 dimanche.addEventListener('click', ()=>{
     programme.innerHTML = `<ul class="prog_liste"  >
     <li class="prog_item"><span>11:00</span> <p>Brunch festival</p></li>
     <li class="prog_item"><span>15:00</span> <p>Art et Culture,  expositions lumière</p></li>
+    <li class="prog_item"><span>16:30</span> <p>Battle Sapeurs (concours d’élégance)</p></li>
     <li class="prog_item"><span>19:00</span> <p>Cérémonie de clôture</p></li>
     </ul>`
+    samedi.style.background = "";
+    vendredi.style.background = "";
+    dimanche.style.background = "#ffcf32";
+
+})
+
+let artistes = {
+    musique: [
+        {id: 1, nom: "dj Bookson", profession: "Dj musique Urbaine", photo:"images/DjBookson.jpg"},
+        {id: 2, nom: "Companie Viluka", profession: "Compagnie Dans comptemporaine", photo: "images/compagnie_viluka.jpg"},
+    ],
+    mode_et_sape: [
+        {id: 1, nom: "Ntsimba Marie Jeanne", profession: "Sapeur", photo:"images/hero4.jpg" },
+        {id: 1, nom: "Alphonse Mavoungou", profession: "Sapeur", photo:"images/sapeur5.jpg" },
+        {id: 1, nom: "Jocelyn le Bachelor", profession: "Styliste", photo:"images/jocelyn_le_Bachelor.jpg" }
+    ],
+    art_lumiere: [
+        {id: 1, nom: "Jonas Ekonga", profession: "peintre", photo:"images/peintre.jpg" },
+        {id: 1, nom: "Jonas Ekonga", profession: "meteur en scene", photo:"images/metteur_en_scene.jpg" },
+    ]
+}
+let lineupListe = document.getElementById('lineup_liste')
+function tousAffiche(){
+        let liste = ''
+    for(let el in artistes){
+        for(let artiste of artistes[el]){
+            liste += `<div class="artiste_item">
+            <img src="${artiste.photo}"/>
+            <div class="conteneur">
+                <h3>${artiste.nom}</h3>
+                <span>${artiste.profession}</span>
+            </div>
+            </div>`
+        }
+    }
+    lineupListe.innerHTML = liste
+}
+tousAffiche()
+
+function fficheCategorie(categorie){
+    let liste = ''
+    for(let el in artistes){
+        if(el == categorie){
+            for(let artiste of artistes[el]){
+                liste += `<div class="artiste_item">
+                <img src="${artiste.photo}"/>
+                <div class="conteneur">
+                    <h3>${artiste.nom}</h3>
+                    <span>${artiste.profession}</span>
+                </div>
+                </div>`
+            }
+        }
+    }
+    lineupListe.innerHTML = liste
+}
+
+let musique = document.getElementById('musique')
+musique.addEventListener('click', ()=>{
+    fficheCategorie(musique.id)
+})
+
+let mode_et_sape = document.getElementById('mode_et_sape')
+mode_et_sape.addEventListener('click', ()=>{
+    fficheCategorie(mode_et_sape.id)
+})
+
+let art_lumiere = document.getElementById('art_lumiere')
+art_lumiere.addEventListener('click', ()=>{
+    fficheCategorie(art_lumiere.id)
 })
