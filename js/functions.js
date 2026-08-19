@@ -78,7 +78,7 @@ let artistes = {
     mode_et_sape: [
         {id: 1, nom: "Ntsimba Marie Jeanne", profession: "Sapeur", photo:"images/hero4.jpg" },
         {id: 1, nom: "Alphonse Mavoungou", profession: "Sapeur", photo:"images/sapeur5.jpg" },
-        {id: 1, nom: "Jocelyn le Bachelor", profession: "Styliste", photo:"images/jocelyn_le_Bachelor.jpg" }
+        {id: 1, nom: "Jocelyn le Bachelor", profession: "Styliste", photo:"images/Jocelyn_le_Bachelor.jpg" }
     ],
     art_lumiere: [
         {id: 1, nom: "Jonas Ekonga", profession: "peintre", photo:"images/peintre.jpg" },
