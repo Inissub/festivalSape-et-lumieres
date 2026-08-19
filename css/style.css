@@ -16,7 +16,7 @@
 }
 
 body{
-    background: radial-gradient(ellipse, #681532, #0b0004, #0b0004);
+    /*background: radial-gradient(ellipse, #681532, #0b0004, #0b0004);*/
 }
 /*.......PARTIE HEADER......*/
 header{
@@ -284,6 +284,21 @@ nav div button{
 .conteneur span{
     color: var(--ivoire-foncé);
 }
+
+/*.....Billeterie*/
+#billetterie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.billet_liste{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    margin: 5rem 4rem;
+}
+/*.....informations*/
 
 @media screen and (max-width: 1066px){
     header{

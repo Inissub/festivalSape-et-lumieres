@@ -171,3 +171,18 @@ art_lumiere.addEventListener('click', ()=>{
     mode_et_sape.style.background = "";
     mode_et_sape.style.color = "#ffcf32";
 })
+
+function reserverWhatsapp(pass){
+    let numero = "242068953250";
+    let message = `Bonjour, je souhaite réserver un ${pass} pour le Festival Sape & Lumière`;
+    let encode = encodeURIComponent(message);
+    const url = `https://wa.me/${numero}?text=${encode}`;
+    window.open(url, '_blank');
+}
+
+let reserve = document.querySelectorAll('.reserve')
+for(let buton of reserve){
+    buton.addEventListener('click', ()=>{
+        reserverWhatsapp(buton.dataset.pass)
+    })
+}
