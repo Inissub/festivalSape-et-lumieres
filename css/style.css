@@ -224,6 +224,9 @@ nav div button{
     align-items: center;
     gap: 2rem;
 }
+.lineup{
+    width: 32rem;
+}
 #lineup small{
     color: var(--or);
     font-weight: 500;

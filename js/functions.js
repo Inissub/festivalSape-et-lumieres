@@ -33,8 +33,11 @@ vendredi.addEventListener('click', ()=>{
     <li class="prog_item"><span>23:00</span> <p>Fermeture de la première soirée</p></li>
     </ul>`
     vendredi.style.background = "#ffcf32";
+    vendredi.style.color = "#681532";
     samedi.style.background = "";
+    samedi.style.color = "#ffcf32";
     dimanche.style.background = "";
+    dimanche.style.color = "#ffcf32";
 })
 
 samedi.addEventListener('click', ()=>{
@@ -45,8 +48,11 @@ samedi.addEventListener('click', ()=>{
     <li class="prog_item"><span>20:00</span> <p>Concert de nuit</p></li>
     </ul>`
     vendredi.style.background = "";
+    vendredi.style.color = "#ffcf32";
     dimanche.style.background = "";
+    dimanche.style.color = "#ffcf32";
     samedi.style.background = "#ffcf32";
+    samedi.style.color = "#681532";
 })
 
 dimanche.addEventListener('click', ()=>{
@@ -57,9 +63,11 @@ dimanche.addEventListener('click', ()=>{
     <li class="prog_item"><span>19:00</span> <p>Cérémonie de clôture</p></li>
     </ul>`
     samedi.style.background = "";
+    samedi.style.color = "#ffcf32";
     vendredi.style.background = "";
+    vendredi.style.color = "#ffcf32";
     dimanche.style.background = "#ffcf32";
-
+    dimanche.style.color = "#681532";
 })
 
 let artistes = {
@@ -112,18 +120,54 @@ function fficheCategorie(categorie){
     }
     lineupListe.innerHTML = liste
 }
+let tous = document.getElementById('tous')
+tous.addEventListener('click', ()=>{
+    tousAffiche()
+    tous.style.background = "#ffcf32";
+    tous.style.color = "#681532";
+    musique.style.background = "";
+    musique.style.color = "#ffcf32";
+    mode_et_sape.style.background = "";
+    mode_et_sape.style.color = "#ffcf32";
+    art_lumiere.style.background = "";
+    art_lumiere.style.color = "#ffcf32";
+})
 
 let musique = document.getElementById('musique')
 musique.addEventListener('click', ()=>{
     fficheCategorie(musique.id)
+    musique.style.background = "#ffcf32";
+    musique.style.color = "#681532";
+    tous.style.background = "";
+    tous.style.color = "#ffcf32";
+    mode_et_sape.style.background = "";
+    mode_et_sape.style.color = "#ffcf32";
+    art_lumiere.style.background = "";
+    art_lumiere.style.color = "#ffcf32";
 })
 
 let mode_et_sape = document.getElementById('mode_et_sape')
 mode_et_sape.addEventListener('click', ()=>{
     fficheCategorie(mode_et_sape.id)
+    mode_et_sape.style.background = "#ffcf32";
+    mode_et_sape.style.color = "#681532";
+    tous.style.background = "";
+    tous.style.color = "#ffcf32";
+    musique.style.background = "";
+    musique.style.color = "#ffcf32";
+    art_lumiere.style.background = "";
+    art_lumiere.style.color = "#ffcf32";
 })
 
 let art_lumiere = document.getElementById('art_lumiere')
 art_lumiere.addEventListener('click', ()=>{
     fficheCategorie(art_lumiere.id)
+    art_lumiere.style.background = "#ffcf32";
+    art_lumiere.style.color = "#681532";
+    tous.style.background = "";
+    tous.style.color = "#ffcf32";
+    musique.style.background = "";
+    musique.style.color = "#ffcf32";
+    mode_et_sape.style.background = "";
+    mode_et_sape.style.color = "#ffcf32";
 })
