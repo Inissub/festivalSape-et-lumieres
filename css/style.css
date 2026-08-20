@@ -31,25 +31,30 @@ a{
     font-size: 0.8rem;
     font-weight: 500;
 }
-nav{
+
+.burger_navbar{
+    display: none;
+}
+
+.accueil_navbar {
     display: flex;
     justify-content: space-between;
     margin: auto;
     padding: 1rem 5rem;
     background-color: var(--bordeau-foncé);
 }
-nav div span{
+.accueil_navbar  div span{
     color: var(--ivoire);
 }
-nav ul {
+.accueil_navbar  ul {
     display: flex;
     justify-content: space-between;
     width: 35rem;
 }
-nav ul li{
+.accueil_navbar  ul li{
     display: inline;
 }
-nav div button{
+.accueil_navbar  div button{
     padding: 10px 24px;
     border-radius:5px;
     border: none;
@@ -94,27 +99,29 @@ nav div button{
 }
 .btns{
     display: flex;
-    justify-content: space-between;
     gap: 1rem;
     margin-top: 5rem;
     height: 3rem;
-    width: 25rem;
+    width: auto;
 }
 .hero_btn{
     padding: 10px 24px;
 }
-.hero_btn a{
-    font-size: 0.8rem;
-    color: #120e0a;
-    font-weight: 500;
-}
+
 .btn3{
+    display: inline-flex;       
+    align-items: center;        
+    justify-content: center;
     border: none;
+    color: var(--boerdeau);
     border-radius: 5px;
     background: linear-gradient(120deg, var(--orange), var(--or));
-    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
+    /*box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);*/
 }
 .btn1{
+    display: inline-flex;       
+    align-items: center;        
+    justify-content: center; 
     background-color: transparent;
     backdrop-filter: blur(4px);
     border: solid 1px var(--or);
@@ -125,12 +132,7 @@ nav div button{
     background-color: var(--or);
     color: var(--nuit);
 }
-.btn1 a{
-    color: var(--ivoire);
-}
-.btn1 a:hover{
-    color: var(--boerdeau);
-}
+
 .adresse{
     margin: 2rem 0;
     backdrop-filter: blur(4px);
@@ -206,7 +208,7 @@ nav div button{
 .programme_jour{
     display: flex;
     justify-content: space-between;
-    width: 25rem;
+    width: 21rem;
 }
 .programme_jour button{
     padding: 10px 24px;
@@ -214,6 +216,8 @@ nav div button{
     border: solid 0.01rem var(--or);
     color: var(--or);
     background-color: transparent;
+    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
+    backdrop-filter: blur(4px);
     font-weight: 600;
     transition: 0.3s;
 }
@@ -273,13 +277,13 @@ nav div button{
     margin: 80px;
 }
 .artiste_item{
-    background-color: #d9d9d9;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border-radius: 10px;
     height: 18rem;
-    width: auto; 
+    width: auto;
+    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
 }
 
 .artiste_item img{
@@ -301,6 +305,7 @@ nav div button{
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--ivoire);
+    font-family: "Fraunces", Georgia, serif;
     margin: 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -311,6 +316,8 @@ nav div button{
 }
 .conteneur span{
     color: var(--ivoire-foncé);
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 /*.....Billeterie*/
@@ -319,15 +326,22 @@ nav div button{
     flex-direction: column;
     align-items: center;
     margin: auto;
+    gap: 2rem;
     background-color: var(--ivoire);
     padding: 3rem 2rem;
+}
+#billetterie small{
+    color: var(--boerdeau);
+}
+#billetterie h2{
+    color: var(--nuit);
 }
 .billet_liste{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 2rem;
-    margin: 5rem 4rem;
+    margin: 2rem 4rem;
 }
 .pass{
     height: auto;
@@ -352,7 +366,8 @@ nav div button{
     background-color: var(--or);
     font-weight: 600;
     padding: 0.8rem 1.6rem;
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.148);
+    background: linear-gradient(120deg, var(--orange), var(--or));
+    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
     border-radius: 0px 0px 0px 10px;
 }
 .pass h3{
@@ -364,6 +379,7 @@ nav div button{
     font-size: 1.9rem;
     font-weight: 900;
     color: var(--or);
+    font-family: "Fraunces", Georgia, serif;
 }
 .pass span small{
     color: var(--ivoire-foncé);
@@ -390,7 +406,7 @@ nav div button{
     font-size: 0.9rem;
     border-radius: 10px;
     color: var(--bordeau-foncé);
-    background-color: var(--or);
+    background: linear-gradient(120deg, var(--orange), var(--or));
 }
 
 /*.....informations*/
@@ -427,12 +443,16 @@ nav div button{
     padding: 1rem;
     gap: 1rem;
     border-radius: 10px;
-    background-color: var(--ivoire);
+    background-color: #d9d9d9b9;
     border: solid 2px var(--or);
+    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
 }
 .info_item h3{
     color: var(--boerdeau);
-
+}
+.info_item p{
+    color: var(--nuit);
+    font-weight: 500;
 }
 
 /*...FAQ*/
@@ -468,13 +488,20 @@ nav div button{
     width: 30rem;
     gap: 0.8rem;
     border: none;
-    border-bottom: solid 1px #CFC6B4;
     padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--ivoire);
 
 }
 .faq_liste button span{
     font-weight: 600;
     font-size: 1.1rem;
+    color: var(--bordeau-foncé);
+}
+.faq_liste button p{
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--nuit);
 }
 
 #contact{
@@ -495,6 +522,7 @@ nav div button{
     background-color: var(--bordeau-foncé);
     border-radius: 10px;
     box-sizing: content-box;
+    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
 }
 #contact form div{
     display: flex;
@@ -522,8 +550,9 @@ nav div button{
     border-radius: 5px;
     height: 2rem;
     border: none;
-    background-color: var(--or);
-    color: var(--boerdeau);
+    font-weight: 500;
+    color: var(--bordeau-foncé);
+    background: linear-gradient(120deg, var(--orange), var(--or));
 }
 #contact h2{
     color: var(--ivoire);
@@ -562,16 +591,10 @@ footer p{
     header{
         height: auto;
         border-radius: 0px;
+        padding: 2rem  0;
     }
-    nav{
-        display: flex;
-        flex-direction: column;
-        width: auto;
-    }
-    nav ul{
-        display: flex;
-        flex-direction: column;
-        width: auto;
+    .accueil_navbar {
+        display: none;
     }
     .hero{
         margin: auto 4rem;
