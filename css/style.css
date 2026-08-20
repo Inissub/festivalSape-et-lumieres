@@ -21,10 +21,9 @@ body{
 }
 /*.......PARTIE HEADER......*/
 header{
-    height: 40rem;
-    background-image:radial-gradient(ellipse,  #d9631e61, #68153271, #25030fef 70%), url('../images/Nsimba_Hero.avif');
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 a{
     color: var(--ivoire-foncé);
@@ -62,6 +61,10 @@ a{
     border: none;
 }
 .hero{
+    height: 35rem;
+    background-image:radial-gradient(ellipse,  #d9631e61, #68153271, #25030fef 70%), url('../images/Nsimba_Hero.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -571,121 +574,336 @@ footer{
 footer p{
     color: var(--ivoire-foncé);
 }
+@media screen and (max-width: 1080px){
 
-@media screen and (max-width: 1066px){
     header{
-        height: auto;
-        border-radius: 0px;
+        position: sticky;
+        top: 0;
+        z-index: 50;
     }
     .accueil_navbar {
-        display: none;
-    }
-    .menu{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 4rem;
-        height: 18rem;
-        padding:0 4rem;
-        position: fixed;
-        top: 5rem;
-        z-index: 1000;
     }
-    .menu button{
-        width: 3rem;
-        height: auto;
-        background-color: transparent;
-        box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
-        border: solid 1px var(--or);
-        transition: 0.3s;
-    }
-    .menu button:hover{
-        transform: scale(0.9);
-    }
-    .menu button svg{
-        color: var(--or);
-    }
-    #burger_navbar{
-        background-color: var(--bordeau-foncé);
-        height: 15rem;
-        width: 15rem;
-        max-width: 18rem;
-    }
-    .burger_ul{
+    .accueil_navbar ul{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        height: 15rem;
-        padding: 0 2rem;
-    }
-    .burger_ul li{
-        display: inline;
-    }
-    .presentation{
-        height: auto;
-        gap: 2rem;
-    }
-}
-@media screen and (max-width: 768px){
-    header{
-        height: auto;
-        border-radius: 0px;
-        padding: 2rem  0;
-    }
-    .accueil_navbar {
-        display: none;
-    }
-    .menu{
-        position: fixed;
-        top: 5rem;
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 4rem;
-        height: 18rem;
-        padding:0 4rem;
-    }
-    .menu button{
-        width: 3rem;
-        height: auto;
-        background-color: transparent;
-        box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
-        border: solid 1px var(--or);
-        transition: 0.3s;
-    }
-    .menu button:hover{
-        transform: scale(0.9);
-    }
-    .menu button svg{
-        color: var(--or);
-    }
-    #burger_navbar{
-        background-color: var(--bordeau-foncé);
-        height: 15rem;
-        width: 15rem;
-        max-width: 18rem;
-    }
-    .burger_ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 15rem;
-        padding: 0 2rem;
-    }
-    .burger_ul li{
-        display: inline;
+        width: auto;
     }
     .hero{
-        margin: auto 4rem;
+        height: auto;
+        margin: auto;
     }
     .presentation{
         height: auto;
-        gap: 2rem;
+        width: auto;
+        margin: 5rem auto;
+        padding: 2rem;
     }
-    .adresse{
+    #billetterie{
+        width: auto;
+    }
+
+    .billet_liste{
+        gap: 2rem;
+        margin:auto;
+    }
+    .pass{
+        height: auto;
+        width: auto;
+    }
+
+    #informations{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: auto;
+        padding: 3rem 2rem;
+    }
+    #informations small{
+        font-size: 0.7rem;
+    }
+    #informations h2{
+        font-size: 1rem;
+    }
+    .info_liste{
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3rem;
+    }
+    .info_item h3{
+        color: var(--boerdeau);
+        font-size: 1rem;
+    }
+    .info_item p{
+        color: var(--nuit);
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+
+    #faq{
+        width: auto;
+    }
+    #faq small{
+        margin-bottom: 0.7rem;
+    }
+    #faq h2{
+        font-size: 1rem;
+    }
+    .faq_liste{
+        width: auto;
+    }
+    .faq_liste button{
+        width: auto;
+    }
+    .faq_liste button span{
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--bordeau-foncé);
+    }
+    .faq_liste button p{
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--nuit);
+    }
+
+
+    #contact h2{
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 50;
+    }
+    .accueil_navbar {
         display: flex;
         flex-direction: column;
     }
-}
+    .accueil_navbar ul{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .hero{
+        height: auto;
+        margin: auto;
+    }
+    .presentation{
+        height: auto;
+        width: auto;
+        margin: 5rem auto;
+        padding: 2rem;
+    }
+    /*.......DECOMPTE*/
+    #decompte{
 
+    }
+    .decompte_titre{
+    }
+    .decompte_list{
+        display: flex;
+        width: auto;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+    }
+    .point{
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--or);
+    }
+    .decompte_item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .decompte_item h3{
+        line-height: 1;
+        color: var(--nuit);
+        font-size: 3.5rem;
+        font-weight: 500;
+    }
+    .decompte_item small{
+        color: var(--boerdeau);
+        font-size: 0.7rem;
+    }
+
+    /*.......PROGRAMMES*/
+    #programme{
+        width: auto;
+    }
+    #programme small{
+        color: var(--or);
+        font-weight: 500;
+    }
+    #programme h2{
+        color: var(--ivoire);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .programme_jour{
+        width: auto;
+    }
+
+    .prog_liste{
+        width: auto;
+    }
+
+    /*.......LINE UP*/
+    #lineup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 2rem;
+    }
+    .lineup{
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+        margin: auto;
+    }
+    #lineup small{
+        color: var(--or);
+        font-weight: 500;
+        margin-bottom: 2rem;
+    }
+    #lineup h2{
+        color: var(--ivoire);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    #lineup_liste{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        width: auto;
+        margin: 2rem auto;
+    }
+
+    .conteneur h3 {
+        font-size: 1rem;
+    }
+    .conteneur span{
+        font-size: 0.7rem;
+    }
+
+    /*.....Billeterie*/
+    #billetterie{
+        width: auto;
+    }
+    #billetterie small{
+        color: var(--boerdeau);
+        font-size: 0.7rem;
+    }
+    #billetterie h2{
+        color: var(--nuit);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .billet_liste{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        margin:auto;
+    }
+    .pass{
+        height: auto;
+        width: auto;
+    }
+
+    /*.....informations*/
+    #informations{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: auto;
+        padding: 3rem 2rem;
+    }
+    #informations small{
+        font-size: 0.7rem;
+    }
+    #informations h2{
+        font-size: 1rem;
+    }
+    .info_liste{
+        width: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3rem;
+    }
+    .info_item h3{
+        color: var(--boerdeau);
+        font-size: 1rem;
+    }
+    .info_item p{
+        color: var(--nuit);
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+
+        /*...FAQ*/
+    #faq{
+        width: auto;
+    }
+    #faq small{
+        margin-bottom: 0.7rem;
+    }
+    #faq h2{
+        font-size: 1rem;
+    }
+    .faq_liste{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 1rem;
+        width: auto;
+    }
+    .faq_liste button{
+        width: auto;
+    }
+    .faq_liste button span{
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--bordeau-foncé);
+    }
+    .faq_liste button p{
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--nuit);
+    }
+
+
+    #contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem 2rem;
+        margin: auto;
+    }
+    #contact form{
+        height: auto;
+        width: auto;
+    }
+    #contact form div label{
+        color: var(--or);
+        font-size: 0.7rem;
+    }
+    #contact h2{
+        font-size: 1rem;
+    }
+}
