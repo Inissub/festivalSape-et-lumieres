@@ -16,19 +16,20 @@
 }
 
 body{
-    background-image:  url(../images/motif5-removebg-preview.png), radial-gradient(ellipse, #681532, #25030f, #0b0004fa);
+    background-image: radial-gradient(ellipse, #681532e4, #25030fec, #0b0004e9) , url(../images/motif5-removebg-preview1.png);
     background-size: inherit;
 }
 /*.......PARTIE HEADER......*/
 header{
-    height: 39rem;
-    background-image:radial-gradient(ellipse,  #d9631ec4, #68153287, #25030fef 70%), url('../images/Nsimba_Hero.avif');
+    height: 40rem;
+    background-image:radial-gradient(ellipse,  #d9631e61, #68153271, #25030fef 70%), url('../images/Nsimba_Hero.avif');
     background-size: cover;
     background-repeat: no-repeat;
 }
 a{
-    color: white;
+    color: var(--ivoire-foncé);
     font-size: 0.8rem;
+    font-weight: 500;
 }
 nav{
     display: flex;
@@ -36,6 +37,9 @@ nav{
     margin: auto;
     padding: 1rem 5rem;
     background-color: var(--bordeau-foncé);
+}
+nav div span{
+    color: var(--ivoire);
 }
 nav ul {
     display: flex;
@@ -51,39 +55,50 @@ nav div button{
     border: none;
 }
 .hero{
-    margin: 2rem 4rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .presentation{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
     height: 30rem;
-    margin: 3rem 0;
+    margin-top: 5rem;
+}
+.presentation small{
+    color: var(--ivoire-foncé);
+    font-weight: 500;
 }
 .hero_h1{
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 500;
-    color:  var(--ivoire);
+    color:  var(--or);
+    margin-bottom: 4rem;
+    text-shadow: 0 0 8px var(--or), 0 0 20px var(--orange);
+    font-family: "Fraunces", Georgia, serif;
 }
 .hero_h1 em{
-    color: var(--or);
+    color: var(--ivoire);
+    text-shadow: none;
+    font-style: italic;
+    font-family: "Fraunces", Georgia, serif;
 }
-.hero_P1{
-    font-size: 1.5rem;
-    color: var(--or);
-}
+
 .hero_p{
     color: var(--ivoire-foncé);
+    font-weight: 600;
     text-align: center;
 }
 .btns{
     display: flex;
+    justify-content: space-between;
     gap: 1rem;
+    margin-top: 5rem;
+    height: 3rem;
+    width: 25rem;
 }
 .hero_btn{
     padding: 10px 24px;
@@ -94,29 +109,39 @@ nav div button{
     font-weight: 500;
 }
 .btn3{
-    background-color: var(--or);
     border: none;
     border-radius: 5px;
+    background: linear-gradient(120deg, var(--orange), var(--or));
+    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
 }
 .btn1{
     background-color: transparent;
+    backdrop-filter: blur(4px);
     border: solid 1px var(--or);
     border-radius: 5px;
-}
-.btn1 a{
-    color: var(--ivoire);
+    width: 8rem;
 }
 .btn1:hover{
     background-color: var(--or);
     color: var(--nuit);
 }
-.adresse span {
-    color: #ffcf32; 
-    border: solid 1px #ffcf32;
-    font-size: 0.8rem;
+.btn1 a{
+    color: var(--ivoire);
+}
+.btn1 a:hover{
+    color: var(--boerdeau);
+}
+.adresse{
+    margin: 2rem 0;
+    backdrop-filter: blur(4px);
     padding: 10px 24px;
-    font-weight: 600;
     border-radius: 25px;
+    border: solid 1px var(--or);
+}
+.adresse span {
+    color: var(--or); 
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 /*.......PARTIE DECOMPTE......*/
 #decompte{
@@ -168,7 +193,6 @@ nav div button{
     align-items: center;
     gap: 2rem;
     padding: 3rem 2rem;
-    background-color: #0b0004d8;
 }
 #programme small{
     color: var(--or);
@@ -225,7 +249,6 @@ nav div button{
     flex-direction: column;
     align-items: center;
     padding: 3rem 2rem;
-    background-color:#0b0004d8;
 }
 .lineup{
     width: 32rem;
@@ -377,7 +400,6 @@ nav div button{
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    background-color: #0b0004d8;
     margin: auto;
     padding: 3rem 2rem;
 }
@@ -406,7 +428,7 @@ nav div button{
     gap: 1rem;
     border-radius: 10px;
     background-color: var(--ivoire);
-    border: solid 1px var(--or);
+    border: solid 2px var(--or);
 }
 .info_item h3{
     color: var(--boerdeau);
@@ -418,7 +440,6 @@ nav div button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0b0004d8;
     margin: auto;
     gap: 2rem;
     padding: 3rem 2rem;
@@ -460,7 +481,6 @@ nav div button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0b0004d8;
     padding: 3rem 2rem;
     margin: auto;
 }
@@ -482,7 +502,29 @@ nav div button{
     justify-content: space-between;
     gap: 0.8rem;
 }
-
+#contact form div label{
+    color: var(--or);
+}
+#contact form div input[type="text"]{
+    border-radius: 5px;
+    height: 2rem;
+    outline: none;
+}
+#contact form div input[type="text"]:focus{
+    border: solid 1px var(--or);
+}
+#contact form div textarea{
+    border-radius: 5px;
+    height: 5rem;
+    outline: none;
+}
+#contact form div input[type="submit"]{
+    border-radius: 5px;
+    height: 2rem;
+    border: none;
+    background-color: var(--or);
+    color: var(--boerdeau);
+}
 #contact h2{
     color: var(--ivoire);
     font-weight: 600;
