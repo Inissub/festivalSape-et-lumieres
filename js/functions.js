@@ -186,3 +186,27 @@ for(let buton of reserve){
         reserverWhatsapp(buton.dataset.pass);
     })
 }
+
+let burger = document.getElementById('burger');
+let mobile = document.querySelector('.nav_mobile');
+burger.addEventListener('click', () => {
+    if(mobile){
+        mobile.remove();
+        mobile = null; 
+        return;
+    }
+    const liste = `<ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#programme">Programme</a></li>
+        <li><a href="#lineup">Line-up</a></li>
+        <li><a href="#billetterie">Billetterie</a></li>
+        <li><a href="#partenaires">Partenaires</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>`;
+
+    mobile = document.createElement('div');
+    mobile.classList.add('nav_mobile');
+    mobile.innerHTML = liste;
+    document.body.appendChild(mobile);     
+});
