@@ -180,10 +180,28 @@ function reserverWhatsapp(pass){
     window.open(url, '_blank');
 }
 
-let reserve = document.querySelectorAll('.reserve')
+let reserve = document.querySelectorAll('.reserve');
 for(let buton of reserve){
     buton.addEventListener('click', ()=>{
-        reserverWhatsapp(buton.dataset.pass)
+        reserverWhatsapp(buton.dataset.pass);
     })
 }
 
+let burger = document.getElementById('burger');
+burger.addEventListener('click', ()=>{
+    let navbar = document.getElementById('burger_navbar');
+    if(navbar.style.display == 'none'){
+        navbar.style.display = 'flex';
+        navbar.innerHTML = `<ul class="burger_ul">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#lineup">Line-up</a></li>
+                <li><a href="#billetterie">Billetterie</a></li>
+                <li><a href="#partenaires">Partenaires</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>`
+    }else{
+        navbar.style.display ='none'
+    }
+})

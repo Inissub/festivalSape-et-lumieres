@@ -31,8 +31,10 @@ a{
     font-size: 0.8rem;
     font-weight: 500;
 }
-
-.burger_navbar{
+.menu{
+    display: none;
+}
+#burger_navbar{
     display: none;
 }
 
@@ -445,7 +447,6 @@ a{
     border-radius: 10px;
     background-color: #d9d9d9b9;
     border: solid 2px var(--or);
-    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
 }
 .info_item h3{
     color: var(--boerdeau);
@@ -576,11 +577,49 @@ footer p{
         height: auto;
         border-radius: 0px;
     }
-    nav{
-        width: auto;
+    .accueil_navbar {
+        display: none;
+    }
+    .menu{
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        justify-content: space-between;
+        width: 4rem;
+        height: 18rem;
+        padding:0 4rem;
+        position: fixed;
+        top: 5rem;
+        z-index: 1000;
+    }
+    .menu button{
+        width: 3rem;
+        height: auto;
+        background-color: transparent;
+        box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
+        border: solid 1px var(--or);
+        transition: 0.3s;
+    }
+    .menu button:hover{
+        transform: scale(0.9);
+    }
+    .menu button svg{
+        color: var(--or);
+    }
+    #burger_navbar{
+        background-color: var(--bordeau-foncé);
+        height: 15rem;
+        width: 15rem;
+        max-width: 18rem;
+    }
+    .burger_ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 15rem;
+        padding: 0 2rem;
+    }
+    .burger_ul li{
+        display: inline;
     }
     .presentation{
         height: auto;
@@ -595,6 +634,47 @@ footer p{
     }
     .accueil_navbar {
         display: none;
+    }
+    .menu{
+        position: fixed;
+        top: 5rem;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 4rem;
+        height: 18rem;
+        padding:0 4rem;
+    }
+    .menu button{
+        width: 3rem;
+        height: auto;
+        background-color: transparent;
+        box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
+        border: solid 1px var(--or);
+        transition: 0.3s;
+    }
+    .menu button:hover{
+        transform: scale(0.9);
+    }
+    .menu button svg{
+        color: var(--or);
+    }
+    #burger_navbar{
+        background-color: var(--bordeau-foncé);
+        height: 15rem;
+        width: 15rem;
+        max-width: 18rem;
+    }
+    .burger_ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 15rem;
+        padding: 0 2rem;
+    }
+    .burger_ul li{
+        display: inline;
     }
     .hero{
         margin: auto 4rem;
