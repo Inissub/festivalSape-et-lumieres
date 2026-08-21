@@ -19,6 +19,7 @@
 body{
     background-image: radial-gradient(ellipse, #681532e4, #25030fec, #0b0004e9) , url(../images/motif5-removebg-preview1.png);
     background-size: inherit;
+    overflow-x: hidden;
 }
 /*.......PARTIE HEADER......*/
 header{
@@ -250,7 +251,6 @@ a:hover{
     border: solid 0.01rem var(--or);
     color: var(--or);
     background-color: transparent;
-    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
     backdrop-filter: blur(4px);
     font-weight: 600;
     transition: 0.3s;
@@ -316,7 +316,7 @@ a:hover{
     overflow: hidden;
     border-radius: 10px;
     width: auto;
-    box-shadow: 0 0 24px rgba(254,119,40,0.5), 0 0 48px rgba(255,207,50,0.25);
+    box-shadow: 0 0 8px rgba(254,119,40,0.5), 0 0 8px rgba(255,207,50,0.25);
 }
 
 .artiste_item img{
@@ -486,6 +486,27 @@ a:hover{
 .info_item p{
     color: var(--nuit);
     font-weight: 500;
+}
+
+
+#partenaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+    padding: 3rem 2rem;
+}
+#partenaire small{
+    color: var(--or);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+#partenaire h2{
+    color: var(--ivoire);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 /*...FAQ*/
@@ -769,6 +790,7 @@ footer p{
         justify-content: space-between;
         align-items: center;
         height: auto;
+        gap: 0.5rem;
     }
     .point{
         font-size: 2rem;
@@ -783,7 +805,7 @@ footer p{
     .decompte_item h3{
         line-height: 1;
         color: var(--nuit);
-        font-size: 3.5rem;
+        font-size: 2.2rem;
         font-weight: 500;
     }
     .decompte_item small{
@@ -808,15 +830,32 @@ footer p{
         width: auto;
     }
     .prog_liste{
-        width: 23rem;
-        padding: 0 2rem;
+        width: 100%;
+        max-width: 23rem;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+        .prog_item{
+        gap: 1rem;             
+        align-items: flex-start;
+        padding: 0.8rem 0;
+    }
+    .prog_item span{
+        font-size: 1rem;        
+        flex-shrink: 0;         
+        width: 3.5rem;          
+    }
+    .prog_item p{
+        font-size: 0.9rem;
+        margin: 0;
+        line-height: 1.4;
     }
     .prog_liste li span{
         font-size: 1rem;
     }
     .prog_liste li{
         display: flex;
-        height: 2rem;
+        height: 4rem;
     }
     .prog_liste li p{
         margin: 0;
@@ -920,6 +959,13 @@ footer p{
         color: var(--nuit);
         font-weight: 600;
         font-size: 0.9rem;
+    }
+
+    #partenaire small{
+        font-size: 0.7rem;
+    }
+    #partenaire h2{
+        font-size: 1rem;
     }
 
         /*...FAQ*/
