@@ -73,7 +73,7 @@ dimanche.addEventListener('click', ()=>{
 let artistes = {
     musique: [
         {id: 1, nom: "dj Bookson", profession: "Dj musique Urbaine", photo:"images/DjBookson.jpg"},
-        {id: 2, nom: "Companie Viluka", profession: "Compagnie Dans comptemporaine", photo: "images/compagnie_viluka.jpg"},
+        {id: 2, nom: "Companie Viluka", profession: "Compagnie Danse", photo: "images/compagnie_viluka.jpg"},
     ],
     mode_et_sape: [
         {id: 1, nom: "Ntsimba Marie Jeanne", profession: "Sapeur", photo:"images/hero4.jpg" },
